@@ -24,6 +24,16 @@ sensor:
     loop_time:
       name: "Loop Time"
 
+text_sensor:
+  - platform: version
+    name: "ESPHome Version"
+
+  - platform: debug
+    device:
+      name: "Device Info"
+    reset_reason:
+      name: "Reset Reason"
+      
   #Wifi info
   - platform: wifi_info
     ssid:
@@ -36,13 +46,3 @@ sensor:
       name: ESP Connected BSSID
     scan_results:
       name: ESP Latest Scan Results
-
-text_sensor:
-  - platform: version
-    name: "ESPHome Version"
-
-  - platform: debug
-    device:
-      name: "Device Info"
-    reset_reason:
-      name: "Reset Reason"
